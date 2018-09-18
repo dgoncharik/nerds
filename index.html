@@ -6,7 +6,6 @@
 </head>
 <body>
     <header class="main-header">
-       <div class="container">
             <div class="header-logo">
                 <img src="img/nerds-logo.png" alt="nerds">
             </div>
@@ -21,11 +20,11 @@
             <div class="cart">
                 <a href="#">Корзина</a>
             </div>
-            <div class="header-slider">
+            <section class="header-slider">
                 <div class="header-slider-left">
-                    <h2 class="header-slider-title">
+                    <b class="header-slider-title">
                         Долго, дорого, скурпулезно.
-                    </h2>
+                    </b>
                     <p>
                         Математически выверенный дизайн для вашего сайта или мобильного приложения.
                     </p>
@@ -41,46 +40,49 @@
                     <span></span>
                     <span></span>
                 </nav>
-            </div>
-        </div>
+            </section>
     </header>
     <main class="container">
         <section class="features">
-            <div class="features-item">
-                <div class="feature-icon feature-icon-sites"></div>
-                <h3 class="features-title">Веб-сайты</h3>
-                <p>
-                    Мир никогда не будет прежним после того как увидит ваш сайт!
-                </p>
-                <a href="#" class="btn features-btn-sites">Заказать</a>
-            </div>
-            <div class="features-item">
-                <div class="feature-icon feature-icon-app"></div>
-                <h3 class="features-title">Приложения</h3>
-                <p>
-                    Покорите топ-10 приложений в AppStore и Google Play
-                </p>
-                <a href="#" class="btn features-btn-app">Заказать</a>
-            </div>
-            <div class="features-item">
-                <div class="feature-icon feature-icon-presentations"></div>
-                <h3 class="features-title">Презентации</h3>
-                <p>
-                    Вы даже не подозреваете, насколько вы изумительны!
-                </p>
-                <a href="#" class="btn features-btn-presentations">Заказать</a>
-            </div>
+            <ul class="features-list">
+                <li class="features-item">
+                    <div class="features-icon feature-icon-sites"></div>
+                     <h3 class="features-title">Веб-сайты</h3>
+                    <p>
+                        Мир никогда не будет прежним после того как увидит ваш сайт!
+                    </p>
+                    <a href="#" class="btn features-btn-sites">Заказать</a>
+                </li>
+
+                <li class="features-item">
+                    <div class="features-icon features-icon-app"></div>
+                     <h3 class="features-title">Приложения</h3>
+                    <p>
+                        Покорите топ-10 приложений в AppStore и Google Play
+                    </p>
+                    <a href="#" class="btn features-btn-app">Заказать</a>
+                </li>
+
+                <li class="features-item">
+                    <div class="features-icon features-icon-presentations"></div>
+                     <h3 class="features-title">Презентации</h3>
+                    <p>
+                        Вы даже не подозреваете, насколько вы изумительны!
+                    </p>
+                    <a href="#" class="btn features-btn-presentations">Заказать</a>
+                </li>
+            </ul>
         </section>
         
         <section class="about">
             <div class="about-left">
-                <h2 class="about-title">
+                <p class="about-title">
                     Мы - маленькая, но гордая дизайн-студия из Краснодара
-                </h2>
+                </p>
                 <p>
                     Исповедуем принципы минимализма и чистоты. Ставим математический расчет выше креатива. Работаем не покладая рук, как роботы.
                 </p>
-                <h4 class="about-ul-title">Выполняем заказы на разработку:</h4>
+                <h4 class="about-list-title">Выполняем заказы на разработку:</h4>
                 <ul>
                     <li>Веб-сайтов любой сложности</li>
                     <li>Мобильных приложений для iOS и Android</li>
@@ -88,23 +90,23 @@
                 </ul>
             </div>
             <div class="about-right">
-                <div class="container-about-logo">
-                    <div class="about-logo"></div>
-                    <p>since 2004</p>
-                </div>
-                <h4 class="about-ul-title">Как мы работаем:</h4>
+                <div class="about-logo"></div>
+                <h4 class="about-list-title">С 2004 года любим точность во всем:</h4>
                 <ul>
-                    <li>С самоотдачей 146%</li>
-                    <li>Соблюдая сроки на 100%</li>
-                    <li>По предоплате 50%</li>
+                    <li><span>146%</span>Уровень самоотдачи</li>
+                    <li><span>100%</span>Соблюдение сроков</li>
+                    <li><span>50%</span>Минимальная предоплата</li>
                 </ul>
             </div>
         </section>
-        <aside class="index-content">
-            <div class="index-content-logo index-content-logo-gl"></div>
-            <div class="index-content-logo index-content-logo-html"></div>
-            <div class="index-content-logo index-content-logo-borod"></div>
-        </aside>
+        
+        <article class="links">
+            <a href="https://htmlacademy.ru" class="links-htmlacadeny"><div class="logo"></div></a>
+            <a href="#" class="links-borodinski"><div class="logo"></div></a>
+            <a href="#" class="links-pink"><div class="logo"></div></a>
+            <a href="#" class="links-mishka"><div class="logo"></div></a>
+        </article>
+        
         <section class="map-wrapper">
            <div class="contact">
                <h3>NЁRDS DESIGN STUDIO</h3>
@@ -121,12 +123,12 @@
     </main>
     <footer>
         <div class="footer-social">
-            <a href="" class="social-btn socialbtn-vk">Вконтакте</a>
-            <a href="" class="social-btn socialbtn-fb">Фейсбук</a>
-            <a href="" class="social-btn socialbtn-inst">Инстаграм</a>
+            <a href="#" class="social-btn socialbtn-vk">Вконтакте</a>
+            <a href="#" class="social-btn socialbtn-fb">Фейсбук</a>
+            <a href="#" class="social-btn socialbtn-inst">Инстаграм</a>
         </div>
-        <div class="footer-right">
-            <h3>Давайте дружить, это выгодно!</h3>
+        <div class="footer-text">
+            <b>Давайте дружить, это выгодно!</b>
             <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
     </footer>
