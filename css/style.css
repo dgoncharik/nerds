@@ -572,8 +572,7 @@ button:focus {
   text-transform: none;
   line-height: 55px;
 }
-
-.filter legend,
+.filter__title,
 .catalog-sorting__title {
   font-size: 18px;
   font-weight: bold;
@@ -581,6 +580,7 @@ button:focus {
   text-transform: uppercase;
 
   margin: 0;
+  padding: 0;
 }
 
 .filter-price label {
@@ -664,21 +664,29 @@ button:focus {
   transition-duration: 100ms;
 }
 
-.catalog-list__item-browser {
-  transition-property: background-color;
+.catalog-list__item-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 40px;
+  width: 100%;
+
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='360px' height='40px' viewBox='0 0 360 40' enable-background='new 0 0 360 40' xml:space='preserve'%3E%3Cpath fill='%234D4D4D' d='M356,0H4C1.8,0,0,1.8,0,4v16v20h360V4C360,1.8,358.2,0,356,0z M22.991,27c-3.866,0-7-3.134-7-7s3.134-7,7-7 s7,3.134,7,7S26.857,27,22.991,27z M46.002,27c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S49.868,27,46.002,27z M69.013,27 c-3.866,0-7-3.134-7-7s3.134-7,7-7s7,3.134,7,7S72.879,27,69.013,27z'/%3E%3C/svg%3E");
+  border-radius: 5px 5px 0 0;
+  opacity: 0.12;
+
+  transition-property: opacity;
   transition-duration: 100ms;
 }
 
 .catalog-list__item-link {
-  width: inherit;
-  height: inherit;
-
   display: block;
+  padding-top: 40px;
 }
 
-.catalog-list__item:hover .catalog-list__item-browser,
-.catalog-list__item-link:focus .catalog-list__item-browser {
-  background-color: rgba(77, 77, 77, 1);
+.catalog-list__item:hover .catalog-list__item-link::before,
+.catalog-list__item-link:focus .catalog-list__item-link::before {
+  opacity: 1;
 }
 
 .catalog-list__item:hover {
@@ -689,30 +697,6 @@ button:focus {
 .catalog-list__item-link:focus + .catalog-price {
   display: block;
   /* opacity: 1; */
-}
-
-.catalog-list__item-browser {
-  height: 40px;
-
-  background-color: rgba(77, 77, 77, 0.12);
-  border-radius: 5px 5px 0 0;
-  
-  display: block;
-}
-
-.catalog-list__item-browser span {
-  width: 14px;
-  height: 14px;
-
-  background-color: white;
-  
-  border-radius: 7px;
-  
-  float: left;
-  margin-right: 9px;
-  position: relative;
-  left: 16px;
-  top: 13px;
 }
 
 .catalog-list__item-link img {
@@ -1012,6 +996,10 @@ button:focus {
 
 /* Сетка каталога */
 
+.catalog-page .header {
+  margin-bottom: 60px;
+}
+
 .header__title {
   text-align: center;
   margin: 0px;
@@ -1022,19 +1010,47 @@ button:focus {
 
 .catalog-page-main > .container {
   display: flex;
-  
+}
+
+.filter {
+ width: 280px;
+ margin-right: 140px;
+}
+
+.filter fieldset {
+  margin: 0;
+  padding: 0;
+  /* border: none; */
 }
 
 .catalog-sorting {
   /* display: flex; */
-  
+}
+
+.list-sorting-by {
+  margin: 0;
+  padding: 0;
+}
+
+.list-sorting-method {
+  margin: 0;
+  padding: 0;
+}
+
+.list-sorting-by__item {
+  display: inline-block;
+}
+
+.list-sorting-method__item {
+  display: inline-block;
 }
 
 .catalog-list {
-  display: flex;
+  display: flex; 
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .catalog-list__item {
-  margin-left: 41px;
+  /* margin-left: 41px; */
 }
