@@ -410,40 +410,51 @@ button:focus {
 }
 
 .contacts {
-  position: relative;
+  
 }
 
 .contacts__container {
   width: 319px;
   min-height: 308px;
 
-  padding: 50px 40px;
+  padding: 51px 50px;
   box-sizing: border-box;
 
   background-color: white;
 
   position: absolute;
   top: 54px;
-  left: 139px;
+  left: 140px;
 }
 
 .contacts__title {
   font-size: 18px;
   text-transform: uppercase;
   margin: 0px;
+  margin-bottom: 26px;
 }
 
 .contacts__address,
 .contacts__phone {
+  margin: 0;
+  padding: 0;
   color: #666666;
+  line-height: 18px;
+}
+
+.contacts__address {
+  margin-bottom: 18px;
 }
 
 .contacts__btn {
   width: 219px;
-  margin-top: 20px;
+  position: absolute;
+  bottom: 47px;
 }
 
 .footer-social {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -638,6 +649,8 @@ button:focus {
 }
  
 .catalog-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -829,12 +842,13 @@ button:focus {
 .list-navigation {
   width: 440px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
 }
 
 .list-navigation__item {
- 
+  min-height: 35px;
+ box-sizing: border-box;
 }
 
 .cart {
@@ -887,7 +901,7 @@ button:focus {
 }
 
 .about-us {
-  margin-bottom: 75px; 
+  margin-bottom: 56px; 
   display: flex;
 }
 
@@ -895,6 +909,28 @@ button:focus {
   display: block;
   padding-top: 35px;
   font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.brief-info__text {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 42px;
+}
+
+.brief-info__list-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 22px;
+}
+
+.brief-info__list {
+  margin: 0;
+  padding: 0;
+}
+
+.brief-info__item {
+  margin-bottom: 22px;
 }
 
 .advantages__logo-wrapper {
@@ -912,21 +948,24 @@ button:focus {
   margin: 0;
   padding: 0;
 
-  /* display: flex; */
+  display: flex;
 }
 
 .advantages-list__item {
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
 }
 
 .advantages-list__term {
-  
+  margin: 0;
+  padding: 0;
+  order: 1;
 }
 
 .advantages-list__definition {
   margin: 0;
   padding: 0;
-
+  margin-bottom: 28px;
 }
 
 .list-partner {
@@ -935,10 +974,67 @@ button:focus {
 
   padding: 0;
   padding-top: 52px;
-  padding-bottom: 50px;
+  padding-bottom: 32px;
 
   display: flex;
 
   border-top: 2px solid #eeeeee;
   border-bottom: 2px solid #eeeeee;
+}
+
+.contacts {
+  margin: 0 auto;
+}
+
+.contacts-wrapper {
+  width: 1440px;
+  margin: 0 auto;
+
+  position: relative;
+}
+
+.contacts__map {
+  display: block;
+}
+
+.footer > .container {
+  min-height: 217px;
+  display: flex;
+  align-items: center;
+}
+
+.feedback {
+  width: 960px;
+  min-height: 590px;
+  background-color: yellow;
+  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.75)
+}
+
+/* Сетка каталога */
+
+.header__title {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  padding-top: 78px;
+  padding-bottom: 108px;
+}
+
+.catalog-page-main > .container {
+  display: flex;
+  
+}
+
+.catalog-sorting {
+  /* display: flex; */
+  
+}
+
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalog-list__item {
+  margin-left: 41px;
 }
