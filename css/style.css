@@ -453,24 +453,27 @@ button:focus {
 }
 
 .footer-social {
+  flex-basis: 300px;
   margin: 0;
   padding: 0;
+  margin-right: 100px;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .footer-social__item {
-  width: 80px;
-  height: 80px;
-
-  display: inline-block;
-  
   border-radius: 50%;
+  margin-right: 13px;
+}
+
+.footer-social__item:last-child {
+  margin-right: 0;
 }
 
 .footer-social__item a {
-  width: inherit;
-  height: inherit;
-
+  width: 78px;
+  height: 78px;
   border-radius: inherit;
 
   background-repeat: no-repeat;
@@ -479,6 +482,19 @@ button:focus {
   display: block;
 }
 
+.footer-social__item a:hover,
+.footer-social__item a:focus {
+  background-color: #e74246;
+}
+
+.footer-social__item:active {
+  background-color: #d7373b;
+  box-shadow: inset 0px 3px 0px 0px #c13135;
+}
+
+.footer-social__item a:active {
+  opacity: 0.3;
+}
 
 .footer-social__item_btn_vk a {
   background-image: url("../img/vk-icon.svg");
@@ -492,26 +508,27 @@ button:focus {
   background-image: url("../img/insta-icon.svg");
 }
 
-.footer-social__item a:hover,
-.footer-social__item a:focus {
-  background-color: #e74246;
+.footer-text {
+  flex-basis: 600px;
+  margin-top: 6px;
 }
 
-.footer-social__item a:active {
-  opacity: 0.3;
-}
-
-.footer-social__item:active {
-  background-color: #d7373b;
+.footer-text_size_big,
+.footer-text_size_small {
+  margin: 0;
+  padding: 0;
 }
 
 .footer-text_size_big {
   font-size: 36px;
+  line-height: 36px;
   font-weight: bold;
+  margin-bottom: 13px;
 }
 
 .footer-text_size_small {
   color: #444444;
+  line-height: 16px;
 }
 
 /* Попап "Напишите нам" */
@@ -748,61 +765,52 @@ button:focus {
 }
 
 .paginacion-list {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 60px;
   list-style: none;
+  display: flex;
 }
 
 .paginacion-list__item {
-  float: left;
-  margin-right: 11px;
+  margin-right: 11px; 
 }
 
 .paginacion-list__item > a {
-  width: 50px;
-  height: 50px;
-  
   box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  text-transform: uppercase;
-  background-color: #eeeeee;
-  display: block;
-  border-radius: 3px;
-  position: relative;
-
-  border: 3px solid #eeeeee;
-}
-
-.pagination-list__text {
-  display: inline-block;
-  line-height: 0px;
-  position: absolute;
-  /* top: 50%; */
-  padding-top: 22px;
+  padding-top: 14px;
+  padding-left: 7px;
+  padding-right: 7px;
+  min-width: 50px;
+  min-height: 50px;
   text-align: center;
-  left: 0;
-  right: 0;
+  display: block;
+  background-color: #eeeeee;
+  color: black;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .paginacion-list__item_active > a {
   background-color: #ffffff;
-  border: 3px solid #dbdbdb;
+  box-shadow: inset 3px 3px 0px 0px #dbdbdb,
+              inset -3px -3px 0px 0px #dbdbdb;
 }
 
 .paginacion-list__item > a:hover,
 .paginacion-list__item > a:focus {
   background-color: #dfdfdf;
   outline: none;
-  border: 3px solid #dfdfdf;
 }
 
 .paginacion-list__item > a:active {
-  color: rgba(0, 0, 0, 0.3 );
-  border: none;
-  border-top: 3px solid rgba(0, 0, 0, 0.3 );
+  color: #bfbfbf;
+  box-shadow: inset 0px 3px 0px 0px #bfbfbf;
 }
 
 .paginacion-list__item_next > a {
-  width: 250px;
+  min-width: 260px;
 }
 
 /* Сетка */
@@ -981,10 +989,13 @@ button:focus {
   display: block;
 }
 
+.footer {
+  padding-top: 69px;
+  padding-bottom: 69px;
+}
+
 .footer > .container {
-  min-height: 217px;
   display: flex;
-  align-items: center;
 }
 
 .feedback {
@@ -1005,7 +1016,7 @@ button:focus {
   margin: 0px;
   padding: 0px;
   padding-top: 78px;
-  padding-bottom: 108px;
+  padding-bottom: 109px;
 }
 
 .catalog-page-main > .container {
@@ -1021,6 +1032,10 @@ button:focus {
   margin: 0;
   padding: 0;
   /* border: none; */
+}
+
+.filter-price__title {
+  margin-bottom: 51px;
 }
 
 .catalog-sorting {
@@ -1050,4 +1065,9 @@ button:focus {
   display: flex; 
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 27px;
+}
+
+.catalog-list__item {
+  margin-bottom: 33px;
 }
