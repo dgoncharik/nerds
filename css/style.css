@@ -683,13 +683,14 @@ button:focus {
   padding-top: 40px;
 }
 
-.catalog-list__item:hover .catalog-list__item-link::before,
-.catalog-list__item-link:focus .catalog-list__item-link::before {
-  opacity: 1;
+.catalog-list__item:hover,
+.catalog-list__item-link:focus {
+  box-shadow: 0px 6px 15px 0px rgba(0, 1, 1, 0.25);
 }
 
-.catalog-list__item:hover {
-  box-shadow: 0px 6px 15px 0px rgba(0, 1, 1, 0.25);
+.catalog-list__item-link:hover::before,
+.catalog-list__item-link:focus::before {
+  opacity: 1;
 }
 
 .catalog-list__item:hover > .catalog-price,
@@ -996,7 +997,7 @@ button:focus {
 /* Сетка каталога */
 
 .catalog-page .header {
-  margin-bottom: 60px;
+  margin-bottom: 52px;
 }
 
 .header__title {
@@ -1023,7 +1024,8 @@ button:focus {
 }
 
 .catalog-sorting {
-  /* display: flex; */
+  display: flex;
+  margin-bottom: 51px;
 }
 
 .list-sorting-by {
@@ -1048,8 +1050,4 @@ button:focus {
   display: flex; 
   flex-wrap: wrap;
   justify-content: space-between;
-}
-
-.catalog-list__item {
-  /* margin-left: 41px; */
 }
