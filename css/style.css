@@ -17,6 +17,8 @@
 body {
  padding: 0;
  margin: 0;
+
+ min-width: 1200px;
  
  font-family: 'Roboto', Arial, sans-serif;
  font-size: 16px;
@@ -24,6 +26,13 @@ body {
  color: black;
 
  background-color: white;
+}
+
+.container {
+  width: 1160px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
 }
 
 a {
@@ -37,8 +46,9 @@ button:focus {
 } */
 
 .btn {
+  box-sizing: border-box;
   font: inherit;
-  /* line-height: 18px; */
+  line-height: 18px;
   color:white;
   text-transform: uppercase;
   text-align: center;
@@ -51,9 +61,9 @@ button:focus {
   /* vertical-align: middle; */
 
   /* Для ссылок */
-  width: 160px;
-  padding-top: 13px;
-  padding-bottom: 13px;
+  min-width: 160px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   display: inline-block;
 
 }
@@ -86,6 +96,7 @@ button:focus {
 .header__logo-container {
   width: 160px;
   height: 65px;
+  margin-right: 200px;
 }
 
 .header__logo:hover,
@@ -100,6 +111,8 @@ button:focus {
 .main-navigation {
   font-weight: 500;
   line-height: 30px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .main-navigation a {
@@ -119,6 +132,16 @@ button:focus {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  width: 440px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.list-navigation__item {
+  min-height: 35px;
+  box-sizing: border-box;
 }
 
 .list-navigation__item_active {
@@ -127,8 +150,13 @@ button:focus {
 
 .cart {
   background-image: url("../img/cart-icon-color-mod.svg");
-  /* background-repeat: no-repeat;
-  background-position: left; */
+  width: 160px;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  background-position: 5px 50%;
 }
 
 /* .cart::before {
@@ -145,11 +173,12 @@ button:focus {
   margin-left: 41px;
 } */
 
+
 /* Слайдер */
 .slider {
   background-color: #eeeeee;
-  /* padding-top: 17px; */
   position: relative;
+  margin-bottom: 80px;
 }
 
 .slider-list {
@@ -272,10 +301,27 @@ button:focus {
 
 /* Конец слайдера */
 
+.services {
+  margin-bottom: 40px;
+}
+
 .service-list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  display: flex;
+  border-bottom: 2px solid #eeeeee;
+}
+
+.service-list__item {
+  width: 300px;
+  margin-right: 100px;
+  padding-bottom: 80px;
+}
+
+.service-list__item:last-child {
+  margin-right: 0;
 }
 
 .service-list__icon {
@@ -284,6 +330,8 @@ button:focus {
   
   background-position: center;
   background-repeat: no-repeat;
+
+  margin-bottom: 24px;
 }
 
 .service-list__icon_img_sites {
@@ -308,6 +356,8 @@ button:focus {
   font-size: 24px;
   line-height: 30px;
   text-transform: uppercase;
+
+  margin-bottom: 15px;
 }
 
 .service-list__text {
@@ -315,6 +365,8 @@ button:focus {
   padding: 0;
 
   color: #283136;
+
+  margin-bottom: 34px;
 }
 
 .service-list__btn_color_green {
@@ -345,18 +397,42 @@ button:focus {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.about-us {
+  margin-bottom: 56px; 
+  display: flex;
+}
+
 .brief-info__title {
   font-size: 45px;
   line-height: 45px;
+
+  display: block;
+  padding-top: 35px;
+  font-weight: 500;
+  margin-bottom: 30px;
 }
 
 .brief-info__text {
+  margin: 0;
+  padding: 0;
   color: 283136;
+
+  margin-bottom: 42px;
 }
 
 .brief-info__list-title {
+  margin: 0;
+  padding: 0;
+
   font-weight: bold;
   text-transform: uppercase;
+
+  margin-bottom: 22px;
+}
+
+.brief-info__list {
+  margin: 0;
+  padding: 0;
 }
 
 .brief-info__list {
@@ -365,26 +441,54 @@ button:focus {
 
 .brief-info__item {
   color: #283136;
+  margin-bottom: 22px;
 }
 
 .advantages__logo-wrapper {
   width: 360px;
   height: 208px;
+
+  margin-bottom: 35px;
 }
 
 .advantages-list-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 45px;
+  text-align: center;
   font-weight: bold;
   text-transform: uppercase;
 }
 
+.advantages-list {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+}
+
+.advantages-list__item {
+  display: flex;
+  flex-direction: column;
+}
+
 .advantages-list__term {
+  margin: 0;
+  padding: 0;
+
   color: #283136;
   line-height: 18px;
+
+  order: 1;
 }
 
 .advantages-list__definition {
+  margin: 0;
+  padding: 0;
   font-size: 45px;
   font-weight: bold;
+
+  margin-bottom: 28px;
 }
 
 .advantages-list__definition span {
@@ -394,6 +498,17 @@ button:focus {
 
 .list-partner {
   list-style: none;
+  margin: 0;
+  margin-bottom: 80px;
+
+  padding: 0;
+  padding-top: 52px;
+  padding-bottom: 32px;
+
+  display: flex;
+
+  border-top: 2px solid #eeeeee;
+  border-bottom: 2px solid #eeeeee;
 }
 
 .list-partner__link {
@@ -410,10 +525,17 @@ button:focus {
 }
 
 .contacts {
-  
+  margin: 0 auto;
 }
 
-.contacts__container {
+.contacts-wrapper {
+  width: 1440px;
+  margin: 0 auto;
+
+  position: relative;
+}
+
+.contacts-text {
   width: 319px;
   min-height: 308px;
 
@@ -427,29 +549,42 @@ button:focus {
   left: 140px;
 }
 
-.contacts__title {
+.contacts-text__title {
   font-size: 18px;
   text-transform: uppercase;
   margin: 0px;
   margin-bottom: 26px;
 }
 
-.contacts__address,
-.contacts__phone {
+.contacts-text__address,
+.contacts-text__phone {
   margin: 0;
   padding: 0;
   color: #666666;
   line-height: 18px;
 }
 
-.contacts__address {
+.contacts-text__address {
   margin-bottom: 18px;
 }
 
-.contacts__btn {
+.contacts-text__btn {
   width: 219px;
   position: absolute;
   bottom: 47px;
+}
+
+.contacts__map {
+  display: block;
+}
+
+.footer {
+  padding-top: 69px;
+  padding-bottom: 69px;
+}
+
+.footer > .container {
+  display: flex;
 }
 
 .footer-social {
@@ -532,6 +667,13 @@ button:focus {
 }
 
 /* Попап "Напишите нам" */
+.feedback {
+  width: 960px;
+  min-height: 590px;
+  background-color: yellow;
+  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.75)
+}
+
 .feedback__title {
   font-size: 45px;
   font-weight: 500;
@@ -582,13 +724,38 @@ button:focus {
 }
 
 /* Catalog.html */
+.catalog-page .header {
+  margin-bottom: 52px;
+}
 
-.header h1  {
+.header__title {
+  margin: 0px;
+  padding: 0px;
+  padding-top: 78px;
+  padding-bottom: 108px;
+  
+  text-align: center;
   font-size: 55px;
   font-weight: 500;
   text-transform: none;
   line-height: 55px;
 }
+
+.catalog-page-main > .container {
+  display: flex;
+}
+
+.filter {
+  flex-basis: 260px;
+  margin-right: 140px;
+}
+
+.filter fieldset {
+  margin: 0;
+  padding: 0;
+  /* border: none; */
+}
+
 .filter__title,
 .catalog-sorting__title {
   font-size: 18px;
@@ -598,6 +765,10 @@ button:focus {
 
   margin: 0;
   padding: 0;
+}
+
+.filter-price__title {
+  margin-bottom: 51px;
 }
 
 .filter-price label {
@@ -644,6 +815,27 @@ button:focus {
   border-top: 3px solid rgba(0, 0, 0, 0.3 );
 }
 
+
+.catalog {
+  flex-basis: 760px;
+}
+
+.catalog-sorting {
+  display: flex;
+  margin-bottom: 51px;
+}
+
+.list-sorting-by,
+.list-sorting-method {
+  margin: 0;
+  padding: 0;
+}
+
+.list-sorting-by__item,
+.list-sorting-method__item {
+  display: inline-block;
+}
+
 .catalog-sorting a {
   color: rgba(0, 0, 0, 0.3);
   font-size: 14px;
@@ -669,6 +861,11 @@ button:focus {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 27px;
 }
 
 .catalog-list__item {
@@ -679,6 +876,8 @@ button:focus {
 
   transition-property: box-shadow;
   transition-duration: 100ms;
+
+  margin-bottom: 33px;
 }
 
 .catalog-list__item-link::before {
@@ -811,263 +1010,4 @@ button:focus {
 
 .paginacion-list__item_next > a {
   min-width: 260px;
-}
-
-/* Сетка */
-.container {
-  width: 1160px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto;
-}
-
-.header__logo-container {
-  margin-right: 200px;
-}
-
-.main-navigation {
-  display: flex;
-  /* width: 100%; */
-  justify-content: flex-start;
-}
-
-.list-navigation {
-  width: 440px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-
-.list-navigation__item {
-  min-height: 35px;
- box-sizing: border-box;
-}
-
-.cart {
-  width: 160px;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
- background-position: 5px 50%;
-}
-
-.cart__link {
- 
-}
-
-.slider {
-  margin-bottom: 80px;
-}
-
-.services {
-  margin-bottom: 40px;
-}
-
-.service-list {
-  display: flex;
-  border-bottom: 2px solid #eeeeee;
-}
-
-.service-list__item {
-  width: 300px;
-  margin-right: 100px;
-  padding-bottom: 80px;
-}
-
-.service-list__icon {
-  margin-bottom: 24px;
-}
-
-.service-list__title {
-  margin-bottom: 15px;
-}
-
-.service-list__text {
-  margin-bottom: 34px;
-}
-
-.service-list__item:last-child {
-  margin: 0;
-}
-
-.about-us {
-  margin-bottom: 56px; 
-  display: flex;
-}
-
-.brief-info__title {
-  display: block;
-  padding-top: 35px;
-  font-weight: 500;
-  margin-bottom: 30px;
-}
-
-.brief-info__text {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 42px;
-}
-
-.brief-info__list-title {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 22px;
-}
-
-.brief-info__list {
-  margin: 0;
-  padding: 0;
-}
-
-.brief-info__item {
-  margin-bottom: 22px;
-}
-
-.advantages__logo-wrapper {
-  margin-bottom: 35px;
-}
-
-.advantages-list-title {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 45px;
-  text-align: center;
-}
-
-.advantages-list {
-  margin: 0;
-  padding: 0;
-
-  display: flex;
-}
-
-.advantages-list__item {
-  display: flex;
-  flex-direction: column;
-}
-
-.advantages-list__term {
-  margin: 0;
-  padding: 0;
-  order: 1;
-}
-
-.advantages-list__definition {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 28px;
-}
-
-.list-partner {
-  margin: 0;
-  margin-bottom: 80px;
-
-  padding: 0;
-  padding-top: 52px;
-  padding-bottom: 32px;
-
-  display: flex;
-
-  border-top: 2px solid #eeeeee;
-  border-bottom: 2px solid #eeeeee;
-}
-
-.contacts {
-  margin: 0 auto;
-}
-
-.contacts-wrapper {
-  width: 1440px;
-  margin: 0 auto;
-
-  position: relative;
-}
-
-.contacts__map {
-  display: block;
-}
-
-.footer {
-  padding-top: 69px;
-  padding-bottom: 69px;
-}
-
-.footer > .container {
-  display: flex;
-}
-
-.feedback {
-  width: 960px;
-  min-height: 590px;
-  background-color: yellow;
-  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.75)
-}
-
-/* Сетка каталога */
-
-.catalog-page .header {
-  margin-bottom: 52px;
-}
-
-.header__title {
-  text-align: center;
-  margin: 0px;
-  padding: 0px;
-  padding-top: 78px;
-  padding-bottom: 109px;
-}
-
-.catalog-page-main > .container {
-  display: flex;
-}
-
-.filter {
- width: 280px;
- margin-right: 140px;
-}
-
-.filter fieldset {
-  margin: 0;
-  padding: 0;
-  /* border: none; */
-}
-
-.filter-price__title {
-  margin-bottom: 51px;
-}
-
-.catalog-sorting {
-  display: flex;
-  margin-bottom: 51px;
-}
-
-.list-sorting-by {
-  margin: 0;
-  padding: 0;
-}
-
-.list-sorting-method {
-  margin: 0;
-  padding: 0;
-}
-
-.list-sorting-by__item {
-  display: inline-block;
-}
-
-.list-sorting-method__item {
-  display: inline-block;
-}
-
-.catalog-list {
-  display: flex; 
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 27px;
-}
-
-.catalog-list__item {
-  margin-bottom: 33px;
 }
