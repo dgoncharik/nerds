@@ -255,21 +255,23 @@
   <section class="feedback">
     <h2 class="feedback__title">Напишите нам</h2>
     <form class="input-form" action="https://echo.htmlacademy.ru" method="POST">
-      <p class="input-form__name">
+      <p class="input-form__item input-form__item-name">
         <label for="user-name">Ваше имя:</label>
         <input type="text" id="user-name" name="user-name" placeholder="Имя Фамилия">
       </p>
-      <p class="input-form__email">
+      <p class="input-form__item input-form__item-email">
         <label for="feedback-email">Ваш e-mail:</label>
         <input type="email" id="feedback-email" name="email" placeholder="email@example.com">
       </p>
-      <p class="input-form__text">
+      <p class="input-form__item input-form__item-text">
         <label for="feedback-text">Текст письма:</label>
         <textarea id="feedback-text" name="text" placeholder="В свободной форме"></textarea>
       </p>
       <button type="submit" class="btn input-form__btn">Отправить</button>
     </form>
-    <button class="feedback__close" type="button">Закрыть</button>
+    <button class="feedback__btn-close" type="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
   </section>
   <script src="js/script.js"></script>
 </body>

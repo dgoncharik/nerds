@@ -757,22 +757,70 @@ img {
   transform: translate(-50%, -50%);
   z-index: 1000;
   background-color: #ffffff;
-  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.75)
+  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.75);
+  padding: 84px 100px;
+  padding-top: 66px;
 }
 
 .feedback__title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 35px;
   font-size: 45px;
+  line-height: 45px;
   font-weight: 500;
+}
+
+.input-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-form__item {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-form__item-name,
+.input-form__item-email {
+  width: 360px;
+}
+
+.input-form__item-email {
+  margin-left: auto;
+}
+
+.input-form__item-text {
+  width: 100%;
+  margin-top: 34px;
+  margin-bottom: 47px;
+}
+
+.input-form__item input {
+  min-height: 50px;
+  padding: 0px 5px;
+  box-sizing: border-box;
+}
+
+.input-form__item textarea {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 118px;
+  padding: 0px 5px;
+  box-sizing: border-box;
 }
 
 .input-form label {
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .input-form input,
 .input-form textarea {
   font: inherit;
-
+  border-radius: 3px;
   border: 2px solid #d7dcde;
 }
 
@@ -807,6 +855,60 @@ img {
 .input-form__btn {
   width: 260px;
   min-height: 50px;
+}
+
+.feedback__btn-close {
+  position: absolute;
+  top: 78px;
+  right: 89px;
+  padding: 0;
+  box-sizing: border-box;
+
+  width: 22px;
+  height: 22px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform;
+  transition-duration: 800ms;
+
+  outline: none;
+}
+
+.feedback__btn-close::before,
+.feedback__btn-close::after {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 5px;
+  top: 9px;
+  left: 0;
+  background-color: #fecccd;
+  transition: background-color;
+  transition-duration: inherit;
+}
+
+.feedback__btn-close::before {
+  transform: rotate(45deg);
+}
+
+.feedback__btn-close::after {
+  transform: rotate(-45deg);
+}
+
+.feedback__btn-close:hover {
+  transform: rotate(-90deg);
+}
+
+.feedback__btn-close:hover::before,
+.feedback__btn-close:hover::after {
+  background-color: #fb565a;
+}
+
+.feedback__btn-close:active::before,
+.feedback__btn-close:active::after {
+  opacity: .1;
 }
 
 /* Catalog.html */
