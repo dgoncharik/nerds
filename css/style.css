@@ -1,12 +1,10 @@
-/* .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-} */
+@keyframes popup {
+  0% {transform: translateY(-2000px);}
+  70% {transform: translateY(30px);}
+  90% {transform: translateY(-10px);}
+  100% {transform: translateY(0);}
+}
+
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -612,11 +610,7 @@ img {
 }
 
 .contacts {
-  margin: 0 auto;
-}
-
-.contacts-wrapper {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
 
   position: relative;
@@ -665,9 +659,14 @@ img {
 .contacts__map {
   position: relative;
   z-index: 1;
+
+  display: block;
+  width: 100%;
 }
 
 .contacts__google-map {
+  width: 100%;
+  height: 100%;;
   position: absolute;
   top: 0;
   z-index: 2;
@@ -754,12 +753,20 @@ img {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
+  margin-left: -480px;
+  margin-top: -295px;
   z-index: 1000;
   background-color: #ffffff;
   box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.75);
   padding: 84px 100px;
   padding-top: 66px;
+  display: none;
+}
+
+.popup-show {
+  display: block;
+  animation: popup 0.6s;
 }
 
 .feedback__title {
@@ -802,6 +809,8 @@ img {
   min-height: 50px;
   padding: 0px 5px;
   box-sizing: border-box;
+  transition: border-color;
+  transition-duration: 150ms;
 }
 
 .input-form__item textarea {
