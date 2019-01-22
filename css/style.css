@@ -1,10 +1,19 @@
-@keyframes popup {
+@keyframes bounce {
   0% {transform: translateY(-2000px);}
   70% {transform: translateY(30px);}
   90% {transform: translateY(-10px);}
   100% {transform: translateY(0);}
 }
 
+@keyframes departure {
+  0% {transform: translateY(-2000px);}
+  100% {transform: translateY(0);}
+}
+
+@keyframes shake {
+  0%, 20%, 40%, 60%, 80%, 100% {transform: translateX(-10px);}
+  10%, 30%, 50%, 70%, 90% {transform: translateX(10px);}
+}
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -766,7 +775,19 @@ img {
 
 .popup-show {
   display: block;
-  animation: popup 0.6s;
+  animation: bounce 0.6s;
+  /* animation-fill-mode: forwards; */
+}
+
+.popup-hide {
+  display: block;
+  animation: departure 0.4s;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+}
+
+.popup-error {
+  animation: shake 0.5s;
 }
 
 .feedback__title {
@@ -815,6 +836,7 @@ img {
 
 .input-form__item textarea {
   max-width: 100%;
+  max-height: 210px;
   min-width: 100%;
   min-height: 118px;
   padding: 0px 5px;
@@ -831,6 +853,10 @@ img {
   font: inherit;
   border-radius: 3px;
   border: 2px solid #d7dcde;
+}
+
+.input-form .input-error {
+  border-color: red;
 }
 
 .input-form input:hover,
