@@ -5,11 +5,13 @@ var btnFeedbackClose = feedback.querySelector('.feedback__btn-close');
 var inputUserName = feedback.querySelector('#user-name');
 var inputEmail = feedback.querySelector('#feedback-email');
 var inputText = feedback.querySelector('#feedback-text');
+var slider = document.querySelector('.slider');
+//TODO слайдер сделать
 
 btnWriteUs.addEventListener('click', function(evt) {
   evt.preventDefault();
+  feedback.classList.remove('popup-hide'); 
   feedback.classList.add('popup-show');
-  // feedback.classList.remove('popup-hide'); 
   if (!inputUserName.value) {
     inputUserName.focus();
   } else if (!inputEmail.value) {
@@ -21,26 +23,31 @@ btnWriteUs.addEventListener('click', function(evt) {
 
 btnFeedbackClose.addEventListener('click', function(evt) {
   evt.preventDefault();
-  // feedback.classList.add('popup-hide'); 
+  feedback.classList.add('popup-hide'); 
   feedback.classList.remove('popup-show');
   feedback.classList.remove('popup-error');
+  setTimeout("feedback.classList.remove('popup-hide')", 1000);
 })
 
 window.addEventListener('keydown', function(evt) {
   if (feedback.classList.contains('popup-show') && evt.keyCode === 27) {
       evt.preventDefault();
-      // feedback.classList.add('popup-hide');
+      feedback.classList.add('popup-hide');
       feedback.classList.remove('popup-show');
       feedback.classList.remove('popup-error');
+      setTimeout("feedback.classList.remove('popup-hide')", 1000);
   }
 })
 
 form.addEventListener('submit', function(evt) {
   if (!inputUserName.value || !inputEmail.value || !inputText.value) {
     evt.preventDefault();
-    feedback.classList.add('popup-error');
+    if (feedback.classList.contains('popup-error')) {
+      feedback.classList.remove('popup-error');
+      feedback.offsetWidth = feedback.offsetWidth; 
+    }
 
-    // setTimeout("feedback.classList.remove('popup-error')", 100)
+    feedback.classList.add('popup-error');
 
     if (!inputUserName.value) {
       inputUserName.classList.add('input-error')
