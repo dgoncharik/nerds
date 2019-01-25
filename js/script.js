@@ -6,7 +6,31 @@ var inputUserName = feedback.querySelector('#user-name');
 var inputEmail = feedback.querySelector('#feedback-email');
 var inputText = feedback.querySelector('#feedback-text');
 var slider = document.querySelector('.slider');
-//TODO слайдер сделать
+
+var slides = slider.querySelectorAll('.slider-list__item');
+var sliderRadioBtn = slider.querySelectorAll('input[type="radio"]');
+var sliderLabel = slider.querySelectorAll('.slider-controls__item');
+
+// console.log(slides);
+// console.log(sliderRadioBtn);
+
+var indexDisplayedSlide = 0;
+for (var i=0; i<sliderRadioBtn.length; i++) {
+  
+  (function(i) {
+    var curRadioBtn = sliderRadioBtn[i];
+    var curLabel = sliderLabel[i];
+    var curSlide = slides[i];
+
+    curRadioBtn.addEventListener('click', function(evt) {
+        slides[indexDisplayedSlide].classList.remove('slider-list__item_active');
+        sliderLabel[indexDisplayedSlide].classList.remove('slider-controls__item_active');
+        indexDisplayedSlide = i;
+        curSlide.classList.add('slider-list__item_active');
+        curLabel.classList.add('slider-controls__item_active');
+    })
+  }(i))
+}
 
 btnWriteUs.addEventListener('click', function(evt) {
   evt.preventDefault();

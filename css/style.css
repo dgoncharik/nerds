@@ -15,6 +15,11 @@
   10%, 30%, 50%, 70%, 90% {transform: translateX(10px);}
 }
 
+@keyframes opacity {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -62,6 +67,12 @@ body {
 
 a {
   text-decoration: none;
+}
+
+a.disabled {
+  pointer-events: none !important; 
+  cursor: default !important;
+  color: #888 !important;
 }
 
 img {
@@ -229,6 +240,7 @@ img {
 
 .slider-list__item_active {
   display: block;
+  animation: opacity 0.6s;
 }
 
 .slider-list__item:nth-child(1) {
@@ -317,7 +329,7 @@ img {
 #product-1:focus ~ .slider-controls > label[for="product-1"]::after,
 #product-2:focus ~ .slider-controls > label[for="product-2"]::after,
 #product-3:focus ~ .slider-controls > label[for="product-3"]::after {
-  outline: #4D90FE solid 2px;
+  box-shadow: 0px 0px 0px 2px #4D90FE;
 }
 
 .slider-controls__item_active::before {
