@@ -12,7 +12,6 @@ function Slider (htmlClassLiActive, htmlClassLabelActive) {
 
   this._timerProperties = {
     timerId:undefined,
-    startTime:undefined,
     interval:undefined
   }
 
@@ -44,7 +43,8 @@ function Slider (htmlClassLiActive, htmlClassLabelActive) {
 
   this._enableClickRadio = function(slide) {
     var self = this;
-    slide.radio.addEventListener('click', function(){
+    slide.radio.addEventListener('click', function(evt){
+      evt.preventDefault();
       if (self._timerProperties.timerId) {
         self.restartTimer();
       }
@@ -76,9 +76,7 @@ function Slider (htmlClassLiActive, htmlClassLabelActive) {
 
   this.enableTimer = function(interval) {
     var self = this;
-      self._timerProperties.startTime = new Date();
       self._timerProperties.interval = interval;
-
       self._timerProperties.timerId = setInterval(function() {
         var nextSlide = self._getNextSlide();
         self.setActiveSlide(nextSlide);
